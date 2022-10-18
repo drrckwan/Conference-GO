@@ -39,6 +39,7 @@ class LocationForm extends React.Component {
     async handleSubmit(event) {
         event.preventDefault();
         const data = { ...this.state };
+        console.log(":::data before deletion:::", data)
         data.room_count = data.roomCount;
         delete data.roomCount;
         delete data.states;

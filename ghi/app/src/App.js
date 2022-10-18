@@ -1,6 +1,8 @@
 import Nav from './Nav';
-import AttendeesList from './AttendeesList';
 import LocationForm from './LocationForm';
+import AttendeesList from './AttendeesList';
+import ConferenceForm from './ConferenceForm';
+import AttendeeSignupForm from './AttendeeSignupForm';
 import React from 'react';
 
 
@@ -14,6 +16,8 @@ function App(props) {
       <div className="container">
         {/* <LocationForm /> */}
         {/* <AttendeesList attendees={props.attendees} /> */}
+        {/* <ConferenceForm /> */}
+        <AttendeeSignupForm />
       </div>
     </React.Fragment>
   );
