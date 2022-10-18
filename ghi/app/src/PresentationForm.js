@@ -91,9 +91,6 @@ class PresentationForm extends React.Component {
         };
     };
 
-
-
-
     async componentDidMount() {
         const url = 'http://localhost:8000/api/conferences/';
         const response = await fetch(url);

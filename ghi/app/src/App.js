@@ -4,6 +4,7 @@ import AttendeesList from './AttendeesList';
 import ConferenceForm from './ConferenceForm';
 import AttendeeSignupForm from './AttendeeSignupForm';
 import PresentationForm from './PresentationForm';
+import MainPage from './MainPage';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -17,6 +18,7 @@ function App(props) {
       <Nav />
       <div className="container">
         <Routes>
+          <Route index element={<MainPage />} />
           <Route path="locations">
             <Route path="new" element={<LocationForm />} />
           </Route>
