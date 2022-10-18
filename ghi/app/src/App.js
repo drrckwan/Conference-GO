@@ -3,7 +3,9 @@ import LocationForm from './LocationForm';
 import AttendeesList from './AttendeesList';
 import ConferenceForm from './ConferenceForm';
 import AttendeeSignupForm from './AttendeeSignupForm';
+import PresentationForm from './PresentationForm';
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
 function App(props) {
@@ -11,15 +13,26 @@ function App(props) {
     return null;
   }
   return (
-    <React.Fragment>
+    <BrowserRouter>
       <Nav />
       <div className="container">
-        {/* <LocationForm /> */}
-        {/* <AttendeesList attendees={props.attendees} /> */}
-        {/* <ConferenceForm /> */}
-        <AttendeeSignupForm />
+        <Routes>
+          <Route path="locations">
+            <Route path="new" element={<LocationForm />} />
+          </Route>
+          <Route path="conferences">
+            <Route path="new" element={<ConferenceForm />} />
+          </Route>
+          <Route path="attendees">
+            <Route path="new" element={<AttendeeSignupForm />} />
+            <Route path="" element={<AttendeesList attendees={props.attendees} />} />
+          </Route>
+          <Route path="presentations">
+            <Route path="new" element={<PresentationForm />} />
+          </Route>
+        </Routes>
       </div>
-    </React.Fragment>
+    </BrowserRouter>
   );
 }
 

@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,6 +32,10 @@
                         <li class="nav-item">
                             <a class="nav-link d-none" aria-current="page" href="new-conference.html">New conference</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="new-presentation.html">New
+                                presentation</a>
+                        </li>
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search conferences"
@@ -53,36 +57,31 @@
                             <div class="form-floating mb-3">
                                 <input placeholder="Presenter name" required type="text" name="presenter_name"
                                     id="presenter_name" class="form-control">
-                                <label for="presenter_name">Presenter Name</label>
+                                <label for="presenter_name">Presenter name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input placeholder="mm/dd/yyyy" required type="date" name="starts" id="starts"
-                                    class="form-control">
-                                <label for="starts">Starts</label>
+                                <input placeholder="Presenter email" required type="email" name="presenter_email"
+                                    id="presenter_email" class="form-control">
+                                <label for="presenter_email">Presenter email</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input placeholder="mm/dd/yyyy" required type="date" name="ends" id="ends"
+                                <input placeholder="Company name" type="text" name="company_name" id="company_name"
                                     class="form-control">
-                                <label for="ends">Ends</label>
+                                <label for="company_name">Company name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input placeholder="Title" required type="text" name="title" id="title"
+                                    class="form-control">
+                                <label for="title">Title</label>
                             </div>
                             <div class="mb-3">
-                                <label for="description">Description</label>
-                                <textarea required type="text" name="description" id="description" class="form-control"
-                                    rows="3"></textarea>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input placeholder="Maximum Presentations" required type="number"
-                                    name="max_presentations" id="max_presentations" class="form-control">
-                                <label for="max_presentations">Maximum Presentations</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input placeholder="Maximum Attendees" required type="number" name="max_attendees"
-                                    id="max_attendees" class="form-control">
-                                <label for="max_attendees">Maximum Attendees</label>
+                                <label for="synopsis">Synopsis</label>
+                                <textarea class="form-control" id="synopsis" rows="3" name="synopsis"
+                                    class="form-control"></textarea>
                             </div>
                             <div class="mb-3">
-                                <select required name="location" id="location" class="form-select">
-                                    <option selected value="">Choose a location</option>
+                                <select required name="conference" id="conference" class="form-select">
+                                    <option selected value="">Choose a conference</option>
                                 </select>
                             </div>
                             <button class="btn btn-primary">Create</button>
@@ -94,4 +93,4 @@
     </main>
 </body>
 
-</html> -->
+</html>

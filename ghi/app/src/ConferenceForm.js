@@ -11,7 +11,7 @@ class ConferenceForm extends React.Component {
             maxPresentations: '',
             maxAttendees: '',
             locations: [],
-        }
+        };
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleStartDate = this.handleStartDate.bind(this);
         this.handleEndDate = this.handleEndDate.bind(this);
@@ -78,7 +78,7 @@ class ConferenceForm extends React.Component {
         const response = await fetch(conferenceUrl, fetchConfig);
         if (response.ok) {
             const newConference = await response.json();
-            console.log("New Conference: ", newConference)
+            console.log("New Conference: ", newConference);
 
             const cleared = {
                 name: '',
@@ -90,8 +90,8 @@ class ConferenceForm extends React.Component {
                 location: '',
             };
             this.setState(cleared)
-        }
-    }
+        };
+    };
 
     async componentDidMount() {
         const url = 'http://localhost:8000/api/locations/';
